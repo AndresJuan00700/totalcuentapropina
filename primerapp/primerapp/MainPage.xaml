@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="primerapp.MainPage">
+
+    <StackLayout>
+        <Label Text="preuba" />
+        <Entry x:Name="personasV" Placeholder="Ingrese el numero de personas" TextColor="Black"/>
+        <Entry x:Name="valorcuentaV"  Placeholder="Ingrese el valor de la cuenta" TextColor="Black"/>
+        <Entry x:Name="propinaV"  Placeholder="Ingrese el porcentaje de la propina" TextColor="Black"/>
+       
+        <FlexLayout  JustifyContent="Center"  >
+            <Button Text="Calcular" x:Name="btn" Clicked="btn1" CornerRadius="20" />
+
+            </FlexLayout>
+
+
+        <StackLayout Padding="20,0">
+            <Label Text="Valor propina"/>
+            <Label Text="0" x:Name="valorpropinaV" />
+
+            <Label Text="Valor total con propina"/>
+            <Label Text="0" x:Name="valortotalconpropinaV" />
+
+            <Label Text="Valor total con propina"/>
+            <Label Text="0" x:Name="aporteporpersonaV" />
+
+        </StackLayout>
+        
+        
+    </StackLayout>
+
+</ContentPage>
