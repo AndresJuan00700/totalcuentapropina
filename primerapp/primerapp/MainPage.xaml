@@ -21,21 +21,21 @@
         <Frame BackgroundColor="Transparent" BorderColor="DarkGray" Padding="0" Margin="0" CornerRadius="50" HorizontalOptions="FillAndExpand">
             <StackLayout Orientation="Horizontal">
                 <Image Source="https://cdn-icons-png.flaticon.com/512/16/16363.png" HeightRequest="0" WidthRequest="38"/>
-                <Entry x:Name="personasV" Placeholder="Ingrese el numero de personas" TextColor="Black" HorizontalOptions="FillAndExpand"/>
+                <Entry x:Name="personasV" Placeholder="Ingrese el numero de personas" TextColor="Black" HorizontalOptions="FillAndExpand" Keyboard="Numeric"/>
             </StackLayout>
         </Frame>
 
         <Frame BackgroundColor="Transparent" BorderColor="DarkGray" Padding="0" Margin="0" CornerRadius="50" HorizontalOptions="FillAndExpand">
             <StackLayout Orientation="Horizontal">
                 <Image Source="https://cdn.pixabay.com/photo/2021/02/06/18/28/money-5988976_960_720.png" HeightRequest="0" WidthRequest="38"/>
-                <Entry x:Name="valorcuentaV"  Placeholder="Ingrese el valor de la cuenta" TextColor="Black" HorizontalOptions="FillAndExpand"/>
+                <Entry x:Name="valorcuentaV"  Placeholder="Ingrese el valor de la cuenta" TextColor="Black" HorizontalOptions="FillAndExpand" Keyboard="Numeric"/>
             </StackLayout>
         </Frame>
 
         <Frame BackgroundColor="Transparent" BorderColor="DarkGray" Padding="0" Margin="0" CornerRadius="50" HorizontalOptions="FillAndExpand">
             <StackLayout Orientation="Horizontal">
                 <Image Source="https://images.vexels.com/media/users/3/204928/isolated/preview/a2da74a1aa9c01010914cfbb3d84212d-trazo-de-simbolo-de-porcentaje.png" HeightRequest="0" WidthRequest="38"/>
-                <Entry x:Name="propinaV"  Placeholder="Ingrese el porcentaje de la propina" TextColor="Black" HorizontalOptions="FillAndExpand"/>
+                <Entry x:Name="propinaV"  Placeholder="Ingrese el porcentaje de la propina" TextColor="Black" HorizontalOptions="FillAndExpand" Keyboard="Numeric"/>
             </StackLayout>
         </Frame>
 
@@ -60,7 +60,7 @@
 
             <Grid.RowDefinitions>
                 <RowDefinition Height="2*"/>
-                <RowDefinition Height="4*"/>
+             
                 
                 
 
@@ -80,27 +80,48 @@
             <Label Text="0" x:Name="valortotalconpropinaV"  FontSize="Medium" Grid.Column="1" Grid.Row="1"  />
 
 
+        </Grid>
 
+        
+        
 
+        <Grid Padding="20,0,0,0">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="2*"/>
+
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*" />
+                <ColumnDefinition Width="1*" />
+
+            </Grid.ColumnDefinitions>
+            <FlexLayout Direction="Column" FlexLayout.Grow="1"  AlignItems="Center"   >
+
+                <RelativeLayout Padding="0,0,0,0"  Margin="-30"  >
+                    <BoxView Color="white"
+                             RelativeLayout.XConstraint="50"
+                             RelativeLayout.YConstraint="90"
+                             RelativeLayout.WidthConstraint="300"
+                             RelativeLayout.HeightConstraint="5" />
+
+                </RelativeLayout>
+
+            </FlexLayout>
 
             <Label Text="Aporte por persona"  FontSize="Medium" Grid.Column="0" Grid.Row="2"   FontAttributes="Bold" />
             <Label Text="0" x:Name="aporteporpersonaV"   FontSize="Medium" Grid.Column="1" Grid.Row="2" />
 
 
+
+
+
         </Grid>
+        
+        
+     
 
-        <FlexLayout Direction="Column" FlexLayout.Grow="1"  AlignItems="Center"   >
-
-            <RelativeLayout Padding="0,0,0,30">
-                <BoxView Color="#EEEEEE"
-                             RelativeLayout.XConstraint="30"
-                             RelativeLayout.YConstraint="-50"
-                             RelativeLayout.WidthConstraint="300"
-                             RelativeLayout.HeightConstraint="5" />
-
-            </RelativeLayout>
-
-        </FlexLayout>
     </StackLayout>
    
 </ContentPage>

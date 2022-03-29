@@ -24,7 +24,7 @@ namespace primerapp
         {
            var numeropersonas = double.Parse(personasV.Text);
           var  valorcuenta = double.Parse(valorcuentaV.Text);
-          var  propina = double.Parse(propinaV.Text);
+          var  propina = double.Parse(propinaV.Text)/100;
 
           var propinaporcentaje = valorcuenta*propina;
             var valormaspropina = valorcuenta + propinaporcentaje;
