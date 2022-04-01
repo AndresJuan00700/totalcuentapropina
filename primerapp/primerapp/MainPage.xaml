@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="primerapp.MainPage"
-             BackgroundImageSource="https://i.pinimg.com/736x/04/ea/a9/04eaa9d3175f67a3942e9d91d3fa62b4.jpg">
+             BackgroundColor="Black">
 
 
 
@@ -14,57 +14,73 @@
     <StackLayout Padding="20,0">
 
         <FlexLayout JustifyContent="Center" Padding="0,20,0,20">
-            <Label  FontSize="Large" FontAttributes="Bold" Text="Punto 1"></Label>
+            <Label  FontSize="Large" FontAttributes="Bold" Text="La vaca" TextColor="White"   ></Label>
+
         </FlexLayout>
+        <StackLayout Orientation="Horizontal">
+            <Image Source="https://images.vexels.com/media/users/3/196199/isolated/preview/d7e91e6d6e2a8d51eddbcd122dade6b3-lindo-personaje-de-vaca.png" HeightRequest="100" Margin="70,0,0,0" />
 
+        <Image Source="https://cdn.pixabay.com/photo/2021/02/06/18/28/money-5988976_960_720.png" HeightRequest="100" WidthRequest="150"   Margin="-40,0,0,0"   />
+        </StackLayout>
 
-        <Frame BackgroundColor="Transparent" BorderColor="DarkGray" Padding="0" Margin="0" CornerRadius="50" HorizontalOptions="FillAndExpand">
+        <StackLayout>
+            <RelativeLayout >
+            <BoxView Color="white" 
+                             RelativeLayout.XConstraint="170"
+                             RelativeLayout.YConstraint="10"
+                             RelativeLayout.WidthConstraint="5"
+                             RelativeLayout.HeightConstraint="155" />
+
+        </RelativeLayout>
+        <Frame BackgroundColor="White" BorderColor="Green" Padding="0" Margin="0,-170,0,10" CornerRadius="50" HorizontalOptions="FillAndExpand">
             <StackLayout Orientation="Horizontal">
                 <Image Source="https://cdn-icons-png.flaticon.com/512/16/16363.png" HeightRequest="0" WidthRequest="38"/>
                 <Entry x:Name="personasV" Placeholder="Ingrese el numero de personas" TextColor="Black" HorizontalOptions="FillAndExpand" Keyboard="Numeric"/>
             </StackLayout>
         </Frame>
 
-        <Frame BackgroundColor="Transparent" BorderColor="DarkGray" Padding="0" Margin="0" CornerRadius="50" HorizontalOptions="FillAndExpand">
+        <Frame BackgroundColor="White" BorderColor="Green" Padding="0"  Margin="0,0,0,10" CornerRadius="50" HorizontalOptions="FillAndExpand">
             <StackLayout Orientation="Horizontal">
                 <Image Source="https://cdn.pixabay.com/photo/2021/02/06/18/28/money-5988976_960_720.png" HeightRequest="0" WidthRequest="38"/>
                 <Entry x:Name="valorcuentaV"  Placeholder="Ingrese el valor de la cuenta" TextColor="Black" HorizontalOptions="FillAndExpand" Keyboard="Numeric"/>
             </StackLayout>
         </Frame>
 
-        <Frame BackgroundColor="Transparent" BorderColor="DarkGray" Padding="0" Margin="0" CornerRadius="50" HorizontalOptions="FillAndExpand">
+        <Frame BackgroundColor="White" BorderColor="Green" Padding="0"  Margin="0,0,0,10" CornerRadius="50" HorizontalOptions="FillAndExpand">
             <StackLayout Orientation="Horizontal">
                 <Image Source="https://images.vexels.com/media/users/3/204928/isolated/preview/a2da74a1aa9c01010914cfbb3d84212d-trazo-de-simbolo-de-porcentaje.png" HeightRequest="0" WidthRequest="38"/>
                 <Entry x:Name="propinaV"  Placeholder="Ingrese el porcentaje de la propina" TextColor="Black" HorizontalOptions="FillAndExpand" Keyboard="Numeric"/>
             </StackLayout>
         </Frame>
 
-        <FlexLayout  JustifyContent="Center" Padding="0,20,0,0" >
-            <Button Text="Calcular" x:Name="btn" Clicked="btn1" CornerRadius="20" Background="DarkGray" FontAttributes="Bold" />
-
+            <FlexLayout  JustifyContent="Center" Padding="0,10,0,0" >
+                <Button Text="Calcular" x:Name="btn" Clicked="btn1" CornerRadius="20" Background="white" FontAttributes="Bold" />
+           
             </FlexLayout>
 
         <FlexLayout Direction="Column" FlexLayout.Grow="1"  AlignItems="Center"   >
 
             <RelativeLayout Padding="0,0,0,30">
-                <BoxView Color="DarkGray"
+                <BoxView Color="white" 
                              RelativeLayout.XConstraint="0"
                              RelativeLayout.YConstraint="10"
                              RelativeLayout.WidthConstraint="410"
                              RelativeLayout.HeightConstraint="5" />
 
             </RelativeLayout>
-
+      
         </FlexLayout>
-        <Grid Padding="20,40,0,0">
+        </StackLayout>
+        <Frame  BackgroundColor="White" BorderColor="Green" Padding="0,0,0,40" Margin="0"  HorizontalOptions="FillAndExpand">
+            <Grid Padding="20,40,0,0">
 
             <Grid.RowDefinitions>
                 <RowDefinition Height="2*"/>
-             
-                
-                
 
-            </Grid.RowDefinitions>
+                    <RowDefinition Height="2*"/>
+
+
+                </Grid.RowDefinitions>
 
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="2*" />
@@ -72,55 +88,29 @@
                 
             </Grid.ColumnDefinitions>
 
+            
+            
+            
 
             <Label Text="Valor propina" FontSize="Medium"  Grid.Row="0" Grid.Column="0" FontAttributes="Bold"  />
-            <Label Text="0" x:Name="valorpropinaV"  FontSize="Medium" Grid.Row="0" Grid.Column="1" />
+                <Label Text="0" x:Name="valorpropinaV"  FontSize="Medium" Grid.Row="0" Grid.Column="1" FontAttributes="Bold" TextColor="Green" />
 
             <Label Text="Valor total con propina"  FontSize="Medium" Grid.Column="0" Grid.Row="1" FontAttributes="Bold"  />
-            <Label Text="0" x:Name="valortotalconpropinaV"  FontSize="Medium" Grid.Column="1" Grid.Row="1"  />
+                <Label Text="0" x:Name="valortotalconpropinaV"  FontSize="Medium" Grid.Column="1" Grid.Row="1" FontAttributes="Bold" TextColor="Green" />
 
+                <Label Text="Aporte por persona" TextColor="Black" FontSize="Medium" Grid.Column="0" Grid.Row="2"   FontAttributes="Bold" />
+                <Label Text="0" x:Name="aporteporpersonaV"   FontSize="Medium" Grid.Column="1" Grid.Row="2" FontAttributes="Bold" TextColor="Green"  />
 
-        </Grid>
+            </Grid>
+
+        </Frame>
 
         
-        
 
-        <Grid Padding="20,0,0,0">
+           
 
-            <Grid.RowDefinitions>
-                <RowDefinition Height="2*"/>
-
-            </Grid.RowDefinitions>
-
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="2*" />
-                <ColumnDefinition Width="1*" />
-
-            </Grid.ColumnDefinitions>
-            <FlexLayout Direction="Column" FlexLayout.Grow="1"  AlignItems="Center"   >
-
-                <RelativeLayout Padding="0,0,0,0"  Margin="-30"  >
-                    <BoxView Color="white"
-                             RelativeLayout.XConstraint="50"
-                             RelativeLayout.YConstraint="90"
-                             RelativeLayout.WidthConstraint="300"
-                             RelativeLayout.HeightConstraint="5" />
-
-                </RelativeLayout>
-
-            </FlexLayout>
-
-            <Label Text="Aporte por persona"  FontSize="Medium" Grid.Column="0" Grid.Row="2"   FontAttributes="Bold" />
-            <Label Text="0" x:Name="aporteporpersonaV"   FontSize="Medium" Grid.Column="1" Grid.Row="2" />
-
-
-
-
-
-        </Grid>
-        
-        
      
+
 
     </StackLayout>
    

@@ -33,7 +33,7 @@ namespace primerapp
             valorpropinaV.Text = propinaporcentaje.ToString();
             valortotalconpropinaV.Text = valormaspropina.ToString();
             aporteporpersonaV.Text = aporteporpersona.ToString();
-
+          
 
 
         }
