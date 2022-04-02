@@ -38,7 +38,21 @@ namespace primerapp
 
         }
 
+        private void btn22(object sender, EventArgs e)
+        {
+           
+            personasV.Text = "";
+            valorcuentaV.Text = "";
+            propinaV.Text = "";
 
+
+            valorpropinaV.Text = "0";
+            valortotalconpropinaV.Text = "0";
+          aporteporpersonaV.Text = "0";
+
+
+
+        }
 
     }
 }

@@ -54,8 +54,8 @@
         </Frame>
 
             <FlexLayout  JustifyContent="Center" Padding="0,10,0,0" >
-                <Button Text="Calcular" x:Name="btn" Clicked="btn1" CornerRadius="20" Background="white" FontAttributes="Bold" />
-           
+                <Button Text="Calcular" x:Name="btn" Clicked="btn1" CornerRadius="20" Background="white" FontAttributes="Bold" Margin="0,0,10,0" />
+                <Button Text="Limpiar fomrulario" x:Name="btn2" Clicked="btn22" CornerRadius="20" Background="white" FontAttributes="Bold" />
             </FlexLayout>
 
         <FlexLayout Direction="Column" FlexLayout.Grow="1"  AlignItems="Center"   >
